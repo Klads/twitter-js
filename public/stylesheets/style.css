@@ -57,3 +57,32 @@ code {
 .content .by {
   font-weight: bold;
 }
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+li {
+  list-style: none;
+}
+.name {
+  font-weight: bold;
+  color: #4099FF;
+   }
+
+.tweetcontent {
+  font-weight: lighter;
+  font-style: italic;
+  color: #4099FF;
+}
+
+.tweetcontainer {
+  display: inline-block;
+ 
+}
+
+.tweetimg {
+  display: inline-block;
+  height: 48px;
+  width: 48px;
+
+  
+}

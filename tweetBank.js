@@ -35,8 +35,10 @@ for (let i = 0; i < 10; i++) {
 }
 
 console.log(data);
-console.log(find(function(o){
-	if (o.content.indexOf('funny') > -1) {
-		return true;
-	}
-}));
+// console.log(find(function(o){
+// 	if (o.content.indexOf('funny') > -1) {
+// 		return true;
+// 	}
+// }));
+
+console.log(find({'name': "Dan"}))

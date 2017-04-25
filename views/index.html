@@ -15,7 +15,11 @@
     
       <!-- display tweets here -->
       {% for tweet in tweets %}
-        <li>{{tweet.content}}</li>
+        <li><img class = "tweetimg" src = "http://images.clipartpanda.com/baby-pig-clipart-pig_3_cute.png">
+          <div class = 'tweetcontainer'>
+            <div class='name'>{{tweet.name}}</div><div class='tweetcontent'>{{tweet.content}}</div>
+          </div>
+        </li>
       {% endfor %}
       
     </div>
