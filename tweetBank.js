@@ -10,6 +10,7 @@ function list () {
 }
 
 function find (properties) {
+  console.log(data);
   return _.cloneDeep(_.filter(data, properties));
 }
 
@@ -41,4 +42,4 @@ console.log(data);
 // 	}
 // }));
 
-console.log(find({'name': "Dan"}))
+//console.log(find({'name': "Dan"}))

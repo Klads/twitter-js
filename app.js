@@ -2,8 +2,15 @@
 const express = require( 'express' );
 const nunjucks = require( 'nunjucks' );
 const routes = require( './routes' );
+const bodyParser = require( 'body-parser' );
 
 const app = express(); // creates an instance of an express application
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// parse application/json
+app.use(bodyParser.json());
 
 app.use('*', function (req, res, next) {
   console.log(req.method, req.originalUrl);
@@ -21,7 +28,7 @@ const people = [{name: 'Grace Hopper'}, {name: 'Person'}];
 
 nunjucks.configure('views', {noCache: true});
 nunjucks.render('index.html', {title: 'Hall of Fame', people: people}, function (err, output) {
-    console.log(output);
+    //console.log(output);
 });
 
 // app.get('/views', function(req, res, next) {

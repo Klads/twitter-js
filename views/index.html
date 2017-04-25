@@ -12,12 +12,24 @@
       100 followers
     </div>
     <div class="col-md-9">
+
+    {% if showForm %}
+	  <form action="/tweets" method="POST">
+	    <label for="name_field">Name:</label>
+	    <input name="name" type="text" id="name_field" value="{% if userName %}{{userName}}{% else %}Yr name here{% endif %}" />
+
+	    <label for="text_field">Text:</label>
+	    <input name="text" type="text" id="text_field" style="width: 350px;" />
+
+	    <input type="submit" value="Submit" />
+	  </form>
+	{% endif %}
     
       <!-- display tweets here -->
       {% for tweet in tweets %}
         <li><img class = "tweetimg" src = "http://images.clipartpanda.com/baby-pig-clipart-pig_3_cute.png">
           <div class = 'tweetcontainer'>
-            <div class='name'>{{tweet.name}}</div><div class='tweetcontent'>{{tweet.content}}</div>
+            <div class='name'><a href="/users/{{tweet.name}}">{{tweet.name}}</a></div><div class='tweetcontent'>{{tweet.content}}</div>
           </div>
         </li>
       {% endfor %}
